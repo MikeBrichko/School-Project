@@ -18,13 +18,10 @@ public class Rectangle {
 
     public boolean intersects(Rectangle other)
     {
-        if ((left >= other.left && left <= other.right && top >= other.top && top <= other.bottom)
+        return ((left >= other.left && left <= other.right && top >= other.top && top <= other.bottom)
                 || (right >= other.left && right <= other.right && top <= other.top && top >= other.bottom)
                 || (left >= other.left && left <= other.right && bottom >= other.bottom && bottom <= other.top)
-                || (right >= other.left && right <= other.right && bottom >= other.bottom && bottom <= other.top))
-            return true;
-        else
-            return false;
+                || (right >= other.left && right <= other.right && bottom >= other.bottom && bottom <= other.top));
     }
 
     public int getX()
